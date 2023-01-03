@@ -163,6 +163,79 @@ void snowman(){
 
 
 }
+void Melting(){
+    glColor3f(1.0,1.0,1.0);
+	glPushMatrix();//snowman body
+	glTranslatef(-3.0,-2.0,mz);
+    glRotatef(180,0,0,0);
+    glutSolidSphere(2.0,10,5);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(0.0, 0.0, 0.0);//left eye
+    glTranslatef(-2.0,-2.0,mtz);
+    glRotatef(180,0,0,0);
+    //glRotatef(zRotated,0,1,0);
+    glutSolidSphere(0.1,30,30);
+    glPopMatrix();
+
+    glPushMatrix();//right eye
+    glColor3f(0.0, 0.0, 0.0);
+    glTranslatef(-2.0,-2.0,mtz);
+    glRotatef(180,0,0,0);
+    //glRotatef(zRotated,0,1,0);
+    glutSolidSphere(0.1,30,30);
+    glPopMatrix();
+
+    glPushMatrix();//nose
+    glColor3f(1.5, 0.0, 0.0);
+    glTranslatef(-2.0,-1.5,mtz);
+    glRotatef(180,0,0,0);
+    //glRotatef(zRotated,0,1,0);
+    glutSolidCone(0.1,2,20,30);
+    glPopMatrix();
+
+    glPushMatrix(); //left hand
+    glColor3ub(116, 52, 32);
+    glTranslatef(-2.0,-1.0,mtz);
+    glRotatef(180,0,0,0);
+    //glRotatef(zRotated,0,1,0);
+    glutSolidCone(0.1,3,10,10);
+    glPopMatrix();
+
+    glPushMatrix(); //right hand
+    glColor3ub(116, 52, 32);
+    glTranslatef(-1.0,-1.0,mtz);
+    glRotatef(180,0,3,0);
+    //glRotatef(zRotated,0,1,0);
+    glutSolidCone(0.1,7,10,10);
+    glPopMatrix();
+
+}
+void keyspeed(int key, int x,int y){
+    if (key==GLUT_KEY_UP) {
+        sx=10.0; sy=7.0; sz=1.0;
+        kx=5.0; ky=7.0; kz=-14.0;
+        bz=-15.0; btz=-15.0;
+        mz=3.0; mtz=6.0;
+
+    }
+    else if (key==GLUT_KEY_DOWN) {
+        sx=10.0, sy=7.0, sz=-15.0;
+        kx=5.0, ky=7.0, kz=-15.0;
+        bz=3.0; btz=6.0;
+        mz=-15.0; mtz=-15.0;
+    }
+   /* else if (key==GLUT_KEY_RIGHT) {
+        sx=10.0, sy=7.0, sz=-15.0;
+        kx=5.0, ky=7.0, kz=-15.0;
+    }
+    else if (key==GLUT_KEY_LEFT) {
+        sx=10.0, sy=7.0, sz=-15.0;
+        kx=5.0, ky=7.0, kz=-15.0;
+    }*/
+
+}
 
 void timer(int)
 {
