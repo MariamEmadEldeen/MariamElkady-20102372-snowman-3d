@@ -91,7 +91,14 @@ void sun(){
     //glPopMatrix();
 }
 
+void sky(){
+    glColor3f(0.0,0.0,5.5);
+    glTranslatef(kx,ky,kz);
+    glRotatef(180,0,0,0);
+    //glRotatef(angle,0,0,1);
+    glutSolidCube(30);
 
+}
 
 
 void snowman(){
