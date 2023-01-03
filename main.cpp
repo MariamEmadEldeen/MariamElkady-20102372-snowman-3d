@@ -265,7 +265,29 @@ void timer(int)
 
 
 }
+void mountain(){
+    glColor3f(1.0,1.0,1.0);
 
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(-3.0,0.0,-3.0);
+    glRotatef(180,0,0,0);
+    glutSolidSphere(5,40,10);
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(3.4,0.0,-3.0);
+    glRotatef(180,0,0,0);
+    glutSolidSphere(5,40,10);
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(10.0,0.0,-3.0);
+    glRotatef(180,0,0,0);
+    glutSolidSphere(5,40,10);
+    glPopMatrix();
+
+}
 void ground(){
 
     glPushMatrix();
