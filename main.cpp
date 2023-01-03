@@ -19,7 +19,12 @@
 #include <windows.h>
 #include <math.h>
 
-
+float xRotated = 90.0, yRotated = 0.0, zRotated = 0.0;
+float sx=10.0, sy=7.0, sz=-15.0;
+float kx=5.0, ky=7.0, kz=-15.0;
+float bz=3.0, btz=6.0;
+float mz=-15.0, mtz=-15.0;
+float rx=0,ry=0;
 //int timer=0;
 //float m1x=-2.2 ,m1y= 1.3, m1z=6.0 ;
 //float m4x=-1.8 ,m4y=1.3 , m4z=6.0 ;
