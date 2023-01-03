@@ -31,14 +31,7 @@ float rx=0,ry=0;
 
 //------------------------------  reshapeFunc  ---------------------------------
 
-void reshapeFunc (int w, int h)
-{
-    glViewport(0,0,(GLsizei)w,(GLsizei)h);
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
-    gluPerspective (40.0, (GLdouble)w / (GLdouble)h, 0.5, 20.0);
-    glMatrixMode(GL_MODELVIEW);
-}
+
 
 //------------------------------  display   -------------------------------
 void moon(){
